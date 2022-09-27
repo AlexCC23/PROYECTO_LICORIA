@@ -1,0 +1,95 @@
+/* header */
+
+.enlace {
+    color: white;
+    position: absolute;
+    padding: 20px 50px;
+}
+
+
+nav .menu-nombres{
+    float: right;
+    margin-right: 20px; /* espaciado */
+}
+nav label{
+    color: white;
+}
+
+nav .menu-nombres .menu-letras{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+
+}
+
+nav .menu-nombres .menu-letras a{
+    /* color: white; */
+    font-size: 15px;
+    padding: 7px 20px;
+    font-family: Vegur, 'PT Sans', monospace, sans-serif;
+    text-transform: uppercase;
+    border: 3px;
+}
+
+.menu-letras a.inicio, .menu-letras a:hover{
+    background: coral;
+    transition: .5s;
+    border-radius: 2px;
+}
+
+.botonmenu{
+    font-size: 30px;
+    float: right; /* para que se coloque */
+    margin-right: 40px;
+    line-height: 80px; /* se ponga en el medio */
+    float: right;
+    cursor: pointer;
+    display: none; /* no se haga visible en pc */
+}
+
+#check{
+   display: none;
+}
+
+@media (max-width: 952px) {
+    .enlace{
+        padding-left: 20px;
+    }
+    nav .menu-nombres .menu-letras a{
+        font-size: 16px
+    }
+}
+
+@media (max-width: 858px){
+    .botonmenu{
+        display: block;
+    }
+    .menu-nombres {
+        position: absolute;
+        width: 80%;
+        height: 158vh;
+        background: black;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav .menu-nombres .menu-letras{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav .menu-nombres .menu-letras a{
+        font-size:90%;
+
+    }
+
+    .menu-letras a:hover, .menu-letras a.inicio{
+        background: none;
+        color: coral;
+    }
+    #check:checked ~ .menu-nombres{
+        left: 0;
+    }
+}

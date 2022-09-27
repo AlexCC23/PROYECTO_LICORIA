@@ -1,12 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="estilosheader.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/92e67e8d7b.js" crossorigin="anonymous"></script>
+    <title>LICORERÍA ONLINE</title>
 </head>
-<body>
-    <H1>HOLA MUNDO</H1>
+<body class="grid-container">
+    <header class="header">
+        <!-- Creacion de header -->
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="botonmenu">
+                <i class="fa-sharp fa-solid fa-bars"></i>
+            </label>
+            
+            <a href="#" class="enlace">
+                <h1>LOGOTIPO</h1>
+            </a>
+            <ul class="menu-nombres">
+                <li class="menu-letras">
+                    <a class="inicio" href="#">Inicio</a>
+                </li>
+                <li class="menu-letras">
+                    <a href="#">Tiendas</a>
+                </li>
+                <li class="menu-letras">
+                    <a href="#">Nosotros</a>
+                </li>
+                <li class="menu-letras">
+                    <a href="#">Contactanos</a>
+                </li>
+            </ul>  
+        </nav>
+        <div class="container">
+            <input type="text" placeholder="Buscar" class="buscar">
+            <div class="btn">
+                <i class="fa fa-search"></i>
+            </div> <!-- Falta responsive -->
+        </div>
+    </header>
+    <!-- fin -->
+    <nav class="navbar">NAVBAR</nav>   
+    <slider class="slider"> <!-- ul>li*4>img -->
+        <ul>
+            <li><img src="img/bebida1_.jpg" alt=""></li>
+            <li><img src="img/bebida2_.jpg" alt=""></li>
+            <li><img src="img/bebida3_.jpg" alt=""></li>
+            <li><img src="img/bebida4_.jpg" alt=""></li>
+        </ul>
+    </slider>
+    <article class="main">
+        <div class="img-articulos">
+            <img src="img/descarga.jpg" alt="">
+            <img src="img/descarga.jpg" alt="">
+            <img src="img/descarga.jpg" alt="">
+            <img src="img/descarga.jpg" alt="">
+        </div>
+    </article>
+    <footer class="footer">FOOTER</footer>
 </body>
 </html>

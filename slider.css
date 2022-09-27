@@ -1,0 +1,39 @@
+.slider {
+    width: 95%;/*el 95% de su caja slider 360px*/
+    height: 95%;
+    margin: auto;
+    overflow: hidden; /*oculta lo que sobresale de tamaño que estamos dando al silder que es 95% en todos los lados*/
+}
+
+.slider ul{
+    display: flex; /*para poner las imagenes todo en un fila, una al costado de de la otra*/
+    padding: 0;
+    width: 400%; /* como 4 ventanas, 4 imagenes */
+
+    animation: cambio 20s infinite; /*animacion de 20s de manera infinita, el nommbre es "cambio"*/
+    animation-direction: alternate; /*para las secuencias de imagenes regrese hacia atrás*/
+    animation-timing-function: ease-in; /*lento el paso de imagenes*/
+}
+
+.slider li{
+    width: 100%;
+    list-style: none; /* quita el estilo de lista por defecto */
+}
+
+.slider img{
+    width: 100%;
+}
+
+@keyframes cambio{
+    0% {margin-left: 0;}/* que no corra nada, es decir se muestra la primera imagen */
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}/* que corra -100%(una ventana), es decir se muestra la segunda imagen */
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}/* que corra -200%(2 ventanas), es decir se muestra la tercera imagen */
+    75% {margin-left: -200%;}
+
+    80% {margin-left: -300%;}/* que corra -300%(3 ventanas), es decir se muestra la cuarta imagen */
+    100% {margin-left: -300%;}
+}
